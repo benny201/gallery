@@ -320,12 +320,6 @@ var option = {
                 links: [links[0]],
                 width: clientWidth / 4,
                 height: clientHeight / 4,
-                lineStyle: {
-                    normal: {
-                        color: 'source',
-                        curveness: 0.2
-                    }
-                }
             }]
         },
         {
@@ -390,24 +384,12 @@ var option = {
                 links: [links[9]],
                 width: clientWidth / 3,
                 height: clientHeight / 3,
-                lineStyle: {
-                    normal: {
-                        color: 'source',
-                        curveness: 0.2
-                    }
-                },
             }]
         },
         {
             series: [{
                 data: data,
                 links: links,
-                lineStyle: {
-                    normal: {
-                        color: 'source',
-                        curveness: 0.2
-                    }
-                },
                 width: clientWidth / 1.5,
                 height: clientHeight / 1.5,
             }]
