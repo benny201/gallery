@@ -1,12 +1,12 @@
 // 基于准备好的dom，初始化echarts实例
 var myChart = echarts.init(document.getElementById('main'));
 //Company Names
-var companyNames = ['Nike', 'Apple', 'Adidas', 'McDonald', 'KFC', 'Alibaba', 'Tencent', 'ToyoTa', 'Geely', 'USA', 'Samsung', 'Adidas China', 'KFC China', 'China', 'JD.com', 'Tesla'];
+var companyNames = ['USA', 'Nike', 'Apple', 'Adidas', 'McDonald', 'KFC', 'Tesla', 'China', 'Alibaba', 'Tencent', 'Geely', 'Adidas China', 'KFC China', 'JD.com', 'ToyoTa', 'Samsung'];
 
 //screen position
 var clientWidth = document.documentElement.clientWidth;
 var clientHeight = document.documentElement.clientHeight;
-console.log(clientWidth);
+// console.log(clientWidth);
 
 //categories
 var categories = [];
@@ -18,7 +18,7 @@ var categories = [];
     }
 }());
 
-//data
+//All data
 var data = [
     // 0
     {
@@ -172,82 +172,124 @@ var data = [
 var links = [{ //0 2011
     "source": "Nike",
     "target": "USA",
-    "value": "acquired"
+    "value": "acquired",
+    "label": {
+        "normal": {
+            "show": true,
+            // "textStyle": {
+            //   "color": "#D50000"
+            // }
+
+        }
+    }
 }, { //1 2012
     "source": "Apple",
     "target": "Samsung",
-    "value": "sued"
+    "value": "sued",
+    "label": {
+        "normal": {
+            "show": true,
+            // "textStyle": {
+            //   "color": "#000000"
+            // }
+
+        }
+    }
 }, { //2 2012
     "source": "Adidas",
     "target": "Nike",
     "value": "sued",
     "label": {
-        "normal": {
-            "show": true
-        }
+      "normal": {
+          "show": true,
+          // "textStyle": {
+          //   "color": "#000000"
+          // }
+      }
     }
 }, { //3 2014
     "source": "Adidas",
     "target": "Adidas China",
     "value": "decreased stake of",
     "label": {
-        "normal": {
-            "show": true
-        }
+      "normal": {
+          "show": true,
+          // "textStyle": {
+          //   "color": "#4CAF50"
+          // }
+      }
     }
 }, { //4 2014
     "source": "McDonald",
     "target": "USA",
     "value": "increased stake of",
     "label": {
-        "normal": {
-            "show": true
-        }
+      "normal": {
+          "show": true,
+          // "textStyle": {
+          //   "color": "#FF1744"
+          // }
+      }
     }
 }, { //5 2015
     "source": "KFC",
     "target": "KFC China",
     "value": "decreased stake of",
     "label": {
-        "normal": {
-            "show": true
-        }
+      "normal": {
+          "show": true,
+          // "textStyle": {
+          //   "color": "#4CAF50"
+          // }
+      }
     }
 }, { //6 2105
     "source": "Alibaba",
     "target": "China",
     "value": "increased stake of",
     "label": {
-        "normal": {
-            "show": true
-        }
+      "normal": {
+          "show": true,
+          // "textStyle": {
+          //   "color": "#FF1744"
+          // }
+      }
     }
 }, { //7 2016
     "source": "Tencent",
     "target": "JD.com",
     "value": "increased stake of",
     "label": {
-        "normal": {
-            "show": true
-        }
+      "normal": {
+          "show": true,
+          // "textStyle": {
+          //   "color": "#FF1744"
+          // }
+      }
     }
 }, { //8 2016
     "source": "ToyoTa",
     "target": "Tesla",
     "value": "cooperated with",
     "label": {
-        "normal": {
-            "show": true
-        }
+      "normal": {
+          "show": true,
+          // "textStyle": {
+          //   "color": "#F4FF81"
+          // }
+      }
     }
 }, { //9 2017
     "source": "Geely",
     "target": "Tesla",
     "value": "acquired",
     "label": {
-        "normal": {
-            "show": true
-        }
+      "normal": {
+          "show": true,
+          // "textStyle": {
+          //   "color": "#D50000"
+          // }
+      }
     }
 }]
 
@@ -291,28 +333,41 @@ var option = {
         animationDuration: 2000,
         animationEasingUpdate: 'quinticInOut',
         series: [{ // 系列一的一些其他配置
-            name: 'names',
-            type: 'graph',
-            layout: 'circular',
-            categories: categories,
-            focusNodeAdjacency: true,
-            label: {
-                normal: {
-                    position: 'right',
-                    formatter: '{b}'
-                }
+                name: 'names',
+                type: 'graph',
+                layout: 'circular',
+                categories: categories,
+                focusNodeAdjacency: true,
+                label: {
+                    normal: {
+                        position: 'right',
+                        formatter: '{b}',
+                        textStyle: {
+                            fontSize: 13
+                        }
+                    }
+                },
+                edgeSymbol: ['circle', 'arrow'],
+                edgeLabel: {
+                    normal: {
+                        show: true,
+                        textStyle: {
+                            fontSize: 20
+                        },
+                        formatter: "{c}"
+                    }
+                },
+                lineStyle: {
+                    normal: {
+                        color:'source',
+                        width: 3,
+                        curveness: 0.2
+                    }
+                },
+                color: ['#0D47A1', '#1976D2', '#1E88E5', '#2196F3', '#42A5F5', '#64B5F6', '#90CAF9','#B71C1C', '#C62828', '#D32F2F', '#E53935', '#F44336', '#EF5350', '#E57373', '#d48265', '#91c7ae']
             },
-            edgeSymbol: ['circle', 'arrow'],
-            edgeLabel: {
-                normal: {
-                    show: true,
-                    textStyle: {
-                        fontSize: 20
-                    },
-                    formatter: "{c}"
-                }
-            },
-        }]
+
+        ]
     },
     options: [{
             series: [{
@@ -328,24 +383,13 @@ var option = {
                 links: [links[1], links[2]],
                 width: clientWidth / 3,
                 height: clientHeight / 3,
-                lineStyle: {
-                    normal: {
-                        color: 'source',
-                        curveness: 0.2
-                    }
-                },
             }]
         },
         {
             series: [{
-                data: [data[2], data[10], data[1], data[3]],
+                data: [data[10], data[2], data[1], data[3]],
                 links: [links[3], links[4]],
-                lineStyle: {
-                    normal: {
-                        color: 'source',
-                        curveness: 0.2
-                    }
-                },
+
                 width: clientWidth / 2,
                 height: clientHeight / 2,
             }]
@@ -356,26 +400,16 @@ var option = {
                 links: [links[5], links[6]],
                 width: clientWidth / 2,
                 height: clientHeight / 2,
-                lineStyle: {
-                    normal: {
-                        color: 'source',
-                        curveness: 0.2
-                    }
-                },
+
             }]
         },
         {
             series: [{
-                data: [data[9], data[14], data[8], data[0]],
+                data: [data[0], data[14], data[8], data[9]],
                 links: [links[7], links[8]],
                 width: clientWidth / 2,
                 height: clientHeight / 2,
-                lineStyle: {
-                    normal: {
-                        color: 'source',
-                        curveness: 0.2
-                    }
-                },
+
             }]
         },
         {
@@ -392,6 +426,7 @@ var option = {
                 links: links,
                 width: clientWidth / 1.5,
                 height: clientHeight / 1.5,
+
             }]
         }
     ]
