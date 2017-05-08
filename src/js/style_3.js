@@ -31,9 +31,9 @@ var data = [
             }
         }
     }, { //1
-        "name": 'Adidas',
+        "name": 'Apple',
         "symbolSize": 40,
-        "category": 'Adidas',
+        "category": 'Apple',
         'label': {
             normal: {
                 show: true,
@@ -50,7 +50,7 @@ var data = [
         }
     }, { //3
         "name": 'USA',
-        "symbolSize": 40,
+        "symbolSize": 60,
         "category": 'USA',
         'label': {
             normal: {
@@ -76,27 +76,27 @@ var data = [
             }
         }
     }, { //6
-        "name": 'Apple',
+        "name": 'Adidas',
         "symbolSize": 40,
-        "category": 'Apple',
+        "category": 'Adidas',
         'label': {
             normal: {
                 show: true,
             }
         }
     }, { //7
-        "name": 'Alibaba',
+        "name": 'KFC China',
         "symbolSize": 40,
-        "category": 'Alibaba',
+        "category": 'KFC China',
         'label': {
             normal: {
                 show: true,
             }
         }
     }, { //8
-        "name": 'JD.com',
+        "name": 'Adidas China',
         "symbolSize": 40,
-        "category": 'JD.com',
+        "category": 'Adidas China',
         'label': {
             normal: {
                 show: true,
@@ -112,9 +112,9 @@ var data = [
             }
         }
     }, { //10
-        "name": 'Adidas China',
+        "name": 'JD.com',
         "symbolSize": 40,
-        "category": 'Adidas China',
+        "category": 'JD.com',
         'label': {
             normal: {
                 show: true,
@@ -122,7 +122,7 @@ var data = [
         }
     }, { //11
         "name": 'China',
-        "symbolSize": 40,
+        "symbolSize": 60,
         "category": 'China',
         'label': {
             normal: {
@@ -130,18 +130,18 @@ var data = [
             }
         }
     }, { //12
-        "name": 'Geely',
+        "name": 'Alibaba',
         "symbolSize": 40,
-        "category": 'Geely',
+        "category": 'Alibaba',
         'label': {
             normal: {
                 show: true,
             }
         }
-    }, { //13
-        "name": 'KFC China',
+    },{ //13
+        "name": 'Geely',
         "symbolSize": 40,
-        "category": 'KFC China',
+        "category": 'Geely',
         'label': {
             normal: {
                 show: true,
@@ -210,7 +210,7 @@ var links = [{ //0 2011
 }, { //3 2014
     "source": "Adidas",
     "target": "Adidas China",
-    "value": "decreased stake of",
+    "value": "decreased stake",
     "label": {
       "normal": {
           "show": true,
@@ -222,7 +222,7 @@ var links = [{ //0 2011
 }, { //4 2014
     "source": "McDonald",
     "target": "USA",
-    "value": "increased stake of",
+    "value": "increased stake",
     "label": {
       "normal": {
           "show": true,
@@ -234,7 +234,7 @@ var links = [{ //0 2011
 }, { //5 2015
     "source": "KFC",
     "target": "KFC China",
-    "value": "decreased stake of",
+    "value": "decreased stake",
     "label": {
       "normal": {
           "show": true,
@@ -246,7 +246,7 @@ var links = [{ //0 2011
 }, { //6 2105
     "source": "Alibaba",
     "target": "China",
-    "value": "increased stake of",
+    "value": "increased stake",
     "label": {
       "normal": {
           "show": true,
@@ -258,7 +258,7 @@ var links = [{ //0 2011
 }, { //7 2016
     "source": "Tencent",
     "target": "JD.com",
-    "value": "increased stake of",
+    "value": "increased stake",
     "label": {
       "normal": {
           "show": true,
@@ -270,7 +270,7 @@ var links = [{ //0 2011
 }, { //8 2016
     "source": "ToyoTa",
     "target": "Tesla",
-    "value": "cooperated with",
+    "value": "cooperated",
     "label": {
       "normal": {
           "show": true,
@@ -387,7 +387,7 @@ var option = {
         },
         {
             series: [{
-                data: [data[10], data[2], data[1], data[3]],
+                data: [data[6], data[8], data[2], data[3]],
                 links: [links[3], links[4]],
 
                 width: clientWidth / 2,
@@ -396,7 +396,7 @@ var option = {
         },
         {
             series: [{
-                data: [data[4], data[13], data[7], data[11]],
+                data: [data[4], data[7], data[12], data[11]],
                 links: [links[5], links[6]],
                 width: clientWidth / 2,
                 height: clientHeight / 2,
@@ -405,7 +405,7 @@ var option = {
         },
         {
             series: [{
-                data: [data[0], data[14], data[8], data[9]],
+                data: [data[0], data[14], data[10], data[9]],
                 links: [links[7], links[8]],
                 width: clientWidth / 2,
                 height: clientHeight / 2,
@@ -414,7 +414,7 @@ var option = {
         },
         {
             series: [{
-                data: [data[0], data[12]],
+                data: [data[13], data[0]],
                 links: [links[9]],
                 width: clientWidth / 3,
                 height: clientHeight / 3,
