@@ -203,7 +203,8 @@ var links = [{ //0 2011
     "value": "decreased stake of",
     "lineStyle": {
       "normal": {
-        "color": "#9FA8DA"
+        "color": "#9FA8DA",
+        "width": 1
       }
     }
 }, { //4 2014
@@ -221,7 +222,8 @@ var links = [{ //0 2011
     "value": "decreased stake of",
     "lineStyle": {
       "normal": {
-        "color": "#9FA8DA"
+        "color": "#9FA8DA",
+        "width": 1
       }
     }
 }, { //6 2105
@@ -369,7 +371,7 @@ var option = {
                         curveness: 0.2
                     }
                 },
-                color: ['#0D47A1', '#1976D2', '#1E88E5', '#2196F3', '#42A5F5', '#64B5F6', '#90CAF9','#B71C1C', '#C62828', '#D32F2F', '#E53935', '#F44336', '#EF5350', '#E57373', '#d48265', '#795548']
+                color: ['#0D47A1', '#1976D2', '#1E88E5', '#2196F3', '#42A5F5', '#64B5F6', '#90CAF9','#B71C1C', '#C62828', '#D32F2F', '#E53935', '#F44336', '#EF5350', '#E57373', '#F57F17', '#FDD835']
             },
 
         ]
