@@ -1,7 +1,7 @@
 // 基于准备好的dom，初始化echarts实例
 var myChart = echarts.init(document.getElementById('main'));
 //Company Names
-var companyNames = ['USA', 'Nike', 'Apple', 'Adidas', 'McDonald', 'KFC', 'Tesla', 'China', 'Alibaba', 'Tencent', 'Geely', 'Adidas China', 'KFC China', 'JD.com', 'ToyoTa', 'Samsung'];
+var companyNames = ['USA', 'Nike', 'Apple', 'Adidas', 'McDonald', 'KFC', 'Tesla', 'China', 'Alibaba', 'Tencent', 'Geely', 'Adidas China', 'KFC China', 'JD.com', 'Toyota', 'Samsung'];
 
 //screen position
 var clientWidth = document.documentElement.clientWidth;
@@ -148,9 +148,9 @@ var data = [
             }
         }
     }, { //14
-        "name": 'ToyoTa',
+        "name": 'Toyota',
         "symbolSize": 40,
-        "category": 'ToyoTa',
+        "category": 'Toyota',
         'label': {
             normal: {
                 show: true,
@@ -173,122 +173,91 @@ var links = [{ //0 2011
     "source": "Nike",
     "target": "USA",
     "value": "acquired",
-    "label": {
-        "normal": {
-            "show": true,
-            // "textStyle": {
-            //   "color": "#D50000"
-            // }
-
-        }
+    "lineStyle": {
+      "normal": {
+        "color": "#00B0FF"
+      }
     }
+
 }, { //1 2012
     "source": "Apple",
     "target": "Samsung",
     "value": "sued",
-    "label": {
-        "normal": {
-            "show": true,
-            // "textStyle": {
-            //   "color": "#000000"
-            // }
-
-        }
+    "lineStyle": {
+      "normal": {
+        "color": "#FF1744"
+      }
     }
 }, { //2 2012
     "source": "Adidas",
     "target": "Nike",
     "value": "sued",
-    "label": {
+    "lineStyle": {
       "normal": {
-          "show": true,
-          // "textStyle": {
-          //   "color": "#000000"
-          // }
+        "color": "#FF1744"
       }
     }
 }, { //3 2014
     "source": "Adidas",
     "target": "Adidas China",
-    "value": "decreased stake",
-    "label": {
+    "value": "decreased stake of",
+    "lineStyle": {
       "normal": {
-          "show": true,
-          // "textStyle": {
-          //   "color": "#4CAF50"
-          // }
+        "color": "#9FA8DA"
       }
     }
 }, { //4 2014
     "source": "McDonald",
     "target": "USA",
-    "value": "increased stake",
-    "label": {
+    "value": "increased stake of",
+    "lineStyle": {
       "normal": {
-          "show": true,
-          // "textStyle": {
-          //   "color": "#FF1744"
-          // }
+        "color": "#303F9F"
       }
     }
 }, { //5 2015
     "source": "KFC",
     "target": "KFC China",
-    "value": "decreased stake",
-    "label": {
+    "value": "decreased stake of",
+    "lineStyle": {
       "normal": {
-          "show": true,
-          // "textStyle": {
-          //   "color": "#4CAF50"
-          // }
+        "color": "#9FA8DA"
       }
     }
 }, { //6 2105
     "source": "Alibaba",
     "target": "China",
-    "value": "increased stake",
-    "label": {
+    "value": "increased stake of",
+    "lineStyle": {
       "normal": {
-          "show": true,
-          // "textStyle": {
-          //   "color": "#FF1744"
-          // }
+        "color": "#303F9F"
       }
     }
 }, { //7 2016
     "source": "Tencent",
     "target": "JD.com",
-    "value": "increased stake",
-    "label": {
+    "value": "increased stake of",
+    "lineStyle": {
       "normal": {
-          "show": true,
-          // "textStyle": {
-          //   "color": "#FF1744"
-          // }
+        "color": "#303F9F"
       }
     }
 }, { //8 2016
-    "source": "ToyoTa",
+    "source": "Toyota",
     "target": "Tesla",
-    "value": "cooperated",
-    "label": {
+    "value": "cooperated with",
+    "lineStyle": {
       "normal": {
-          "show": true,
-          // "textStyle": {
-          //   "color": "#F4FF81"
-          // }
+        "color": "#FBC02D"
       }
     }
 }, { //9 2017
     "source": "Geely",
     "target": "Tesla",
     "value": "acquired",
-    "label": {
+    "lineStyle": {
       "normal": {
-          "show": true,
-          // "textStyle": {
-          //   "color": "#D50000"
-          // }
+        "color": "#00B0FF"
       }
     }
 }]
@@ -304,20 +273,24 @@ var option = {
             // currentIndex: 2,
             playInterval: 3000,
             loop:false,
-            data: ['2011', '2012', '2014', '2015', '2016', '2017', 'all']
+            data: ['2011', '2012', '2014', '2015', '2016', '2017', '2011-2017']
         },
-        backgroundColor: new echarts.graphic.RadialGradient(0.3, 0.3, 0.8, [{
-            offset: 0,
-            color: '#f7f8fa'
-        }, {
-            offset: 1,
-            color: '#cdd0d5'
-        }]),
+        backgroundColor: '#f7f8fa',
+        // backgroundColor: new echarts.graphic.RadialGradient(0.3, 0.3, 0.8, [{
+        //     offset: 0,
+        //     color: '#f7f8fa'
+        // }, {
+        //     offset: 1,
+        //     color: '#cdd0d5'
+        // }]),
         title: {
-            text: "Relations",
-            subtext: "version-1",
+            text: "Relations Between Companies",
+            subtext: "From 2011 to 2017",
             top: "top",
-            left: "center"
+            left: "left",
+            textStyle: {
+              fontStyle: 'italic'
+            }
         },
         tooltip: {},
         legend: [{
@@ -327,9 +300,39 @@ var option = {
             selectedMode: 'false',
             right: 80,
             // // bottom: 20,
-            top: 'center',
+            top: '15%',
             orient: 'vertical',
-            data: companyNames
+            data: [companyNames[1], companyNames[2], companyNames[3], companyNames[4], companyNames[5], companyNames[6]]
+        }, {
+            tooltip: {
+                show: true
+            },
+            selectedMode: 'false',
+            right: 62,
+            // // bottom: 20,
+            top: '47%',
+            orient: 'vertical',
+            data: [companyNames[8], companyNames[9], companyNames[10], companyNames[11], companyNames[12], companyNames[13]]
+        }, {
+            tooltip: {
+                show: true
+            },
+            selectedMode: 'false',
+            right: 82,
+            // // bottom: 20,
+            top: '78%',
+            orient: 'vertical',
+            data: [companyNames[14],companyNames[15]]
+        }, {
+            tooltip: {
+                show: true
+            },
+            selectedMode: 'false',
+            left: 82,
+            // // bottom: 20,
+            top: '47%',
+            orient: 'vertical',
+            data: [companyNames[0],companyNames[7]]
         }],
         animationDuration: 2000,
         animationEasingUpdate: 'quinticInOut',
@@ -350,15 +353,15 @@ var option = {
                     }
                 },
                 edgeSymbol: ['circle', 'arrow'],
-                edgeLabel: {
-                    normal: {
-                        show: true,
-                        textStyle: {
-                            fontSize: 20
-                        },
-                        formatter: "{c}"
-                    }
-                },
+                // edgeLabel: {
+                //     normal: {
+                //         show: true,
+                //         textStyle: {
+                //             fontSize: 20
+                //         },
+                //         formatter: "{c}"
+                //     }
+                // },
                 lineStyle: {
                     normal: {
                         color:'source',
@@ -366,7 +369,7 @@ var option = {
                         curveness: 0.2
                     }
                 },
-                color: ['#0D47A1', '#1976D2', '#1E88E5', '#2196F3', '#42A5F5', '#64B5F6', '#90CAF9','#B71C1C', '#C62828', '#D32F2F', '#E53935', '#F44336', '#EF5350', '#E57373', '#d48265', '#91c7ae']
+                color: ['#0D47A1', '#1976D2', '#1E88E5', '#2196F3', '#42A5F5', '#64B5F6', '#90CAF9','#B71C1C', '#C62828', '#D32F2F', '#E53935', '#F44336', '#EF5350', '#E57373', '#d48265', '#795548']
             },
 
         ]

@@ -14,8 +14,75 @@ html, body {
   height: 100%;
 }
 
+/*span-color*/
+.color-pan {
+  /*position: fixed;
+  top: 50px;
+  left: 37%;*/
+  position:fixed;margin:auto;left:0; right:0; top:50px;width:600px;
+  /*opacity:;*/
+  background-color: #f7f8fa;
+  font-family: 'sans-serif';
+}
+.color-pan div{
+  display: inline-block;
+  border-radius: 5px;
+}
+#sue {
+  background-color: #FF1744;
+  width: 25px;
+  height: 14px;
+}
+#Acquire {
+  background-color: #00B0FF;
+  width: 25px;
+  height: 14px;
+}
+#Decrease {
+  background-color: #9FA8DA;
+  width: 25px;
+  height: 14px;
+}
+#Increase {
+  background-color: #303F9F;
+  width: 25px;
+  height: 14px;
+}
+#cooperate {
+  background-color: #FBC02D;
+  width: 25px;
+  height: 14px;
+}
+
+/*catagory*/
+#country {
+  position: fixed;
+  left: 80px;
+  top: 45%;
+  font-size: 16px;
+}
+#us {
+  position: fixed;
+  right: 110px;
+  top:13%;
+  font-size: 15px;
+}
+#cn {
+  position: fixed;
+  right: 110px;
+  top:45%;
+  font-size: 15px;
+}
+#as {
+  position: fixed;
+  right: 110px;
+  top:76%;
+  font-size: 15px;
+}
+
+
 /*button*/
-#style_1 {
+/*#style_1 {
   display: block;
   position: fixed;
   width: 100px;
@@ -30,4 +97,4 @@ html, body {
   font-size: 50px;
   left: 20px;
   top: 50%;
-}
+}*/
