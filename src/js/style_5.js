@@ -175,7 +175,7 @@ var links = [{ //0 2011
     "value": "acquired",
     "lineStyle": {
       "normal": {
-        "color": "#00B0FF"
+        "color": "#7F8C8D"
       }
     }
 
@@ -185,7 +185,7 @@ var links = [{ //0 2011
     "value": "sued",
     "lineStyle": {
       "normal": {
-        "color": "#FF1744"
+        "color": "#3498DB"
       }
     }
 }, { //2 2012
@@ -194,7 +194,7 @@ var links = [{ //0 2011
     "value": "sued",
     "lineStyle": {
       "normal": {
-        "color": "#FF1744"
+        "color": "#3498DB"
       }
     }
 }, { //3 2014
@@ -204,7 +204,6 @@ var links = [{ //0 2011
     "lineStyle": {
       "normal": {
         "color": "#9FA8DA",
-        "width": 1
       }
     }
 }, { //4 2014
@@ -223,7 +222,6 @@ var links = [{ //0 2011
     "lineStyle": {
       "normal": {
         "color": "#9FA8DA",
-        "width": 1
       }
     }
 }, { //6 2105
@@ -250,7 +248,7 @@ var links = [{ //0 2011
     "value": "cooperated with",
     "lineStyle": {
       "normal": {
-        "color": "#FBC02D"
+        "color": "#FF1744"
       }
     }
 }, { //9 2017
@@ -259,7 +257,7 @@ var links = [{ //0 2011
     "value": "acquired",
     "lineStyle": {
       "normal": {
-        "color": "#00B0FF"
+        "color": "#7F8C8D"
       }
     }
 }]
@@ -355,6 +353,7 @@ var option = {
                     }
                 },
                 edgeSymbol: ['circle', 'arrow'],
+                edgeSymbolSize: [5,15],
                 // edgeLabel: {
                 //     normal: {
                 //         show: true,
@@ -371,7 +370,9 @@ var option = {
                         curveness: 0.2
                     }
                 },
-                color: ['#0D47A1', '#1976D2', '#1E88E5', '#2196F3', '#42A5F5', '#64B5F6', '#90CAF9','#B71C1C', '#C62828', '#D32F2F', '#E53935', '#F44336', '#EF5350', '#E57373', '#F57F17', '#FDD835']
+                // color: ['#0D47A1', '#1976D2', '#1E88E5', '#2196F3', '#42A5F5', '#64B5F6', '#90CAF9','#B71C1C', '#C62828', '#D32F2F', '#E53935', '#F44336', '#EF5350', '#E57373', '#F57F17', '#FDD835']
+                color: ['#0D47A1', '#1976D2', '#1976D2', '#1976D2', '#1976D2', '#1976D2', '#1976D2','#943126', '#C62828', '#C62828', '#C62828', '#C62828', '#C62828', '#C62828', '#F1C40F', '#F7DC6F']
+
             },
 
         ]
