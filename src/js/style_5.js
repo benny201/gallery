@@ -57,16 +57,7 @@ var data = [
                 show: true,
             }
         }
-    }, { //4
-        "name": 'KFC',
-        "symbolSize": 40,
-        "category": 'KFC',
-        'label': {
-            normal: {
-                show: true,
-            }
-        }
-    }, { //5
+    },  { //4
         "name": 'Nike',
         "symbolSize": 40,
         "category": 'Nike',
@@ -75,7 +66,7 @@ var data = [
                 show: true,
             }
         }
-    }, { //6
+    }, { //5
         "name": 'Adidas',
         "symbolSize": 40,
         "category": 'Adidas',
@@ -84,7 +75,16 @@ var data = [
                 show: true,
             }
         }
-    }, { //7
+    }, { //6
+        "name": 'KFC',
+        "symbolSize": 40,
+        "category": 'KFC',
+        'label': {
+            normal: {
+                show: true,
+            }
+        }
+    },{ //7
         "name": 'KFC China',
         "symbolSize": 40,
         "category": 'KFC China',
@@ -377,41 +377,41 @@ var option = {
 
         ]
     },
-    options: [{
+    options: [{//2011
             series: [{
-                data: [data[5], data[3]],
+                data: [data[4], data[3]],
                 links: [links[0]],
                 width: clientWidth / 4,
                 height: clientHeight / 4,
             }]
         },
-        {
+        {//2012
             series: [{
-                data: [data[6], data[15], data[1], data[5]],
+                data: [data[4], data[15], data[1], data[5]],
                 links: [links[1], links[2]],
                 width: clientWidth / 3,
                 height: clientHeight / 3,
             }]
         },
-        {
+        {//2014
             series: [{
-                data: [data[6], data[8], data[2], data[3]],
+                data: [data[5], data[8], data[2], data[3]],
                 links: [links[3], links[4]],
 
                 width: clientWidth / 2,
                 height: clientHeight / 2,
             }]
         },
-        {
+        {//2015
             series: [{
-                data: [data[4], data[7], data[12], data[11]],
+                data: [data[6], data[7], data[12], data[11]],
                 links: [links[5], links[6]],
                 width: clientWidth / 2,
                 height: clientHeight / 2,
 
             }]
         },
-        {
+        {//2016
             series: [{
                 data: [data[0], data[14], data[10], data[9]],
                 links: [links[7], links[8]],
@@ -420,7 +420,7 @@ var option = {
 
             }]
         },
-        {
+        {//2017
             series: [{
                 data: [data[13], data[0]],
                 links: [links[9]],
@@ -428,7 +428,7 @@ var option = {
                 height: clientHeight / 3,
             }]
         },
-        {
+        {//2011-2017
             series: [{
                 data: data,
                 links: links,
