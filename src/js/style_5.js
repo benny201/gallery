@@ -271,7 +271,7 @@ var option = {
             // loop: false,
             autoPlay: true,
             // currentIndex: 2,
-            playInterval: 3000,
+            playInterval: 2000,
             loop:false,
             data: ['2011', '2012', '2014', '2015', '2016', '2017', '2011-2017']
         },
@@ -334,7 +334,7 @@ var option = {
             orient: 'vertical',
             data: [companyNames[0],companyNames[7]]
         }],
-        animationDuration: 2000,
+        animationDuration: 1500,
         animationEasingUpdate: 'quinticInOut',
         series: [{ // 系列一的一些其他配置
                 name: 'names',
