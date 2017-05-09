@@ -58,25 +58,25 @@ html, body {
 #country {
   position: fixed;
   right: 153px;
-  top: 18%;
+  top: 14%;
   font-size: 16px;
 }
 #us {
   position: fixed;
   right: 110px;
-  top:28%;
+  top:26%;
   font-size: 15px;
 }
 #cn {
   position: fixed;
   right: 110px;
-  top:52%;
+  top:54%;
   font-size: 15px;
 }
 #as {
   position: fixed;
   right: 110px;
-  top:76%;
+  top:82%;
   font-size: 15px;
 }
 
