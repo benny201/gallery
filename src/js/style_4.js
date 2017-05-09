@@ -9,14 +9,15 @@ var clientHeight = document.documentElement.clientHeight;
 // console.log(clientWidth);
 
 //categories
+// var categories = [];
+// (function() {
+//     for (var i = 0; i < companyNames.length; i++) {
+//         categories[i] = {
+//             name: companyNames[i]
+//         };
+//     }
+// }());
 var categories = [];
-(function() {
-    for (var i = 0; i < companyNames.length; i++) {
-        categories[i] = {
-            name: companyNames[i]
-        };
-    }
-}());
 
 //All data
 var data = [
@@ -293,6 +294,8 @@ var links = [{ //0 2011
     }
 }]
 
+//
+
 // 指定图表的配置项和数据
 var option = {
     baseOption: {
@@ -366,7 +369,7 @@ var option = {
                         curveness: 0.2
                     }
                 },
-                color: ['#0D47A1', '#1976D2', '#1E88E5', '#2196F3', '#42A5F5', '#64B5F6', '#90CAF9','#B71C1C', '#C62828', '#D32F2F', '#E53935', '#F44336', '#EF5350', '#E57373', '#d48265', '#91c7ae']
+                // color: ['#0D47A1', '#1976D2', '#1E88E5', '#2196F3', '#42A5F5', '#64B5F6', '#90CAF9','#B71C1C', '#C62828', '#D32F2F', '#E53935', '#F44336', '#EF5350', '#E57373', '#d48265', '#91c7ae']
             },
 
         ]

@@ -20,7 +20,8 @@ var categories = [];
 
 //All data
 var data = [
-    {// 0
+    // 0
+    {
         "name": 'Tesla',
         "symbolSize": 40,
         "category": 'Tesla',
@@ -271,8 +272,6 @@ var option = {
             autoPlay: true,
             // currentIndex: 2,
             playInterval: 2000,
-            symbolSize: 20,
-            bottom: '5%',
             loop:false,
             data: ['2011', '2012', '2014', '2015', '2016', '2017', '2011-2017']
         },
@@ -290,7 +289,8 @@ var option = {
             top: "top",
             left: "left",
             textStyle: {
-              fontStyle: 'italic'
+              fontStyle: 'italic',
+              fontSize: 20
             }
         },
         tooltip: {},
@@ -344,10 +344,6 @@ var option = {
                 categories: categories,
                 focusNodeAdjacency: true,
                 animation: true,
-                draggable: true,
-                circular: {
-                  rotateLabel: true
-                },
                 label: {
                     normal: {
                         position: 'right',
@@ -449,6 +445,3 @@ var option = {
 };
 // 使用刚指定的配置项和数据显示图表。
 myChart.setOption(option);
-window.onresize = function() {
-  myChart.resize();
-};
