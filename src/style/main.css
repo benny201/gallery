@@ -57,20 +57,20 @@ html, body {
 /*catagory*/
 #country {
   position: fixed;
-  left: 80px;
-  top: 45%;
+  right: 153px;
+  top: 18%;
   font-size: 16px;
 }
 #us {
   position: fixed;
   right: 110px;
-  top:13%;
+  top:28%;
   font-size: 15px;
 }
 #cn {
   position: fixed;
   right: 110px;
-  top:45%;
+  top:52%;
   font-size: 15px;
 }
 #as {

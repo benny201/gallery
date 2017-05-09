@@ -200,7 +200,7 @@ var links = [{ //0 2011
 }, { //3 2014
     "source": "Adidas",
     "target": "Adidas China",
-    "value": "decreased stake of",
+    "value": "decreased stake",
     "lineStyle": {
       "normal": {
         "color": "#9FA8DA",
@@ -209,7 +209,7 @@ var links = [{ //0 2011
 }, { //4 2014
     "source": "McDonald",
     "target": "USA",
-    "value": "increased stake of",
+    "value": "increased stake",
     "lineStyle": {
       "normal": {
         "color": "#303F9F"
@@ -218,7 +218,7 @@ var links = [{ //0 2011
 }, { //5 2015
     "source": "KFC",
     "target": "KFC China",
-    "value": "decreased stake of",
+    "value": "decreased stake",
     "lineStyle": {
       "normal": {
         "color": "#9FA8DA",
@@ -227,7 +227,7 @@ var links = [{ //0 2011
 }, { //6 2105
     "source": "Alibaba",
     "target": "China",
-    "value": "increased stake of",
+    "value": "increased stake",
     "lineStyle": {
       "normal": {
         "color": "#303F9F"
@@ -236,7 +236,7 @@ var links = [{ //0 2011
 }, { //7 2016
     "source": "Tencent",
     "target": "JD.com",
-    "value": "increased stake of",
+    "value": "increased stake",
     "lineStyle": {
       "normal": {
         "color": "#303F9F"
@@ -245,7 +245,7 @@ var links = [{ //0 2011
 }, { //8 2016
     "source": "Toyota",
     "target": "Tesla",
-    "value": "cooperated with",
+    "value": "cooperated",
     "lineStyle": {
       "normal": {
         "color": "#FF1744"
@@ -273,6 +273,18 @@ var option = {
             // currentIndex: 2,
             playInterval: 2000,
             loop:false,
+            symbolSize: 20,
+            bottom: 40,
+            controlPosition: 'right',
+            padding: [
+              5,  // 上
+              10, // 右
+              5,  // 下
+              10, // 左
+            ],
+            controlStyle: {
+              itemSize: 25
+            },
             data: ['2011', '2012', '2014', '2015', '2016', '2017', '2011-2017']
         },
         backgroundColor: '#f7f8fa',
@@ -286,11 +298,11 @@ var option = {
         title: {
             text: "Relations Between Companies",
             subtext: "From 2011 to 2017",
-            top: "top",
-            left: "left",
+            top: "1%",
+            left: "center",
             textStyle: {
               fontStyle: 'italic',
-              fontSize: 20
+              fontSize: 30
             }
         },
         tooltip: {},
@@ -301,7 +313,7 @@ var option = {
             selectedMode: 'false',
             right: 80,
             // // bottom: 20,
-            top: '15%',
+            top: '30%',
             orient: 'vertical',
             data: [companyNames[1], companyNames[2], companyNames[3], companyNames[4], companyNames[5], companyNames[6]]
         }, {
@@ -311,7 +323,7 @@ var option = {
             selectedMode: 'false',
             right: 62,
             // // bottom: 20,
-            top: '47%',
+            top: '54%',
             orient: 'vertical',
             data: [companyNames[8], companyNames[9], companyNames[10], companyNames[11], companyNames[12], companyNames[13]]
         }, {
@@ -329,9 +341,9 @@ var option = {
                 show: true
             },
             selectedMode: 'false',
-            left: 82,
+            right: 102,
             // // bottom: 20,
-            top: '47%',
+            top: '20%',
             orient: 'vertical',
             data: [companyNames[0],companyNames[7]]
         }],
@@ -353,17 +365,20 @@ var option = {
                         }
                     }
                 },
+                circular: {
+                  rotateLabel: true
+                },
                 edgeSymbol: ['circle', 'arrow'],
                 edgeSymbolSize: [5,15],
-                // edgeLabel: {
-                //     normal: {
-                //         show: true,
-                //         textStyle: {
-                //             fontSize: 20
-                //         },
-                //         formatter: "{c}"
-                //     }
-                // },
+                edgeLabel: {
+                    normal: {
+                        show: true,
+                        textStyle: {
+                            fontSize: 20
+                        },
+                        formatter: "{c}"
+                    }
+                },
                 lineStyle: {
                     normal: {
                         color:'source',
