@@ -795,15 +795,30 @@ var forcelinks = [{ //0 2011
 var option = {
     baseOption: {
         timeline: {
-            axisType: 'category',
-            // realtime: false,
-            // loop: false,
-            autoPlay: true,
-            // currentIndex: 2,
-            playInterval: 2000,
-            loop: false,
-            symbolSize: 20,
-            bottom: 30,
+          axisType: 'category',
+          // realtime: false,
+          // loop: false,
+          autoPlay: true,
+          // currentIndex: 2,
+          playInterval: 2000,
+          loop: false,
+          symbolSize: 47,
+          symbolOffset: [0, '100%'],
+          symbolRotate :'180',
+          symbol: 'pin',
+          bottom: 45,
+          // bottom:
+          label: {
+            // position: {
+            //   number: 100
+            // }
+            position:'bottom',
+            normal: {
+              textStyle: {
+                fontSize: 15
+              }
+            }
+          },
             controlPosition: 'right',
             controlStyle: {
                 itemSize: 25
